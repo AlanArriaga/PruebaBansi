@@ -1,0 +1,57 @@
+@{
+}
+@model List<PruebaBansi.Models.Examen>;
+
+<div class="row">
+    <div class="col-md-12 offset-sm-2">
+        <h2>Lista examenes</h2>
+        <a asp-asp-controller="Examen" asp-action="Registro" class = "btn btn-success mb-3">Nuevo</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id Examen</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdExamen</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Descripcion</td>
+                        <td>
+                            <a 
+                            asp-asp-controller="Examen" 
+                            asp-action="Consultar"
+                            asp-route-id="@item.IdExamen" 
+                            class = "btn btn-info">Consultar</a>
+                            <a 
+                            asp-asp-controller="Examen" 
+                            asp-action="Editar"
+                            asp-route-id="@item.IdExamen" 
+                            class = "btn btn-primary">Editar</a>
+
+                            <a 
+                            asp-asp-controller="Examen" 
+                            asp-action="EliminarExamen"
+                            onclick="return confirmar()"
+                            asp-route-id="@item.IdExamen" 
+                            class = "btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        function confirmar() {
+            return confirm("¿Desea eliminar el registro?");
+        }
+    </script>
+}

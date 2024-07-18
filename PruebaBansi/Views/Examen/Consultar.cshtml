@@ -1,0 +1,26 @@
+@{
+}
+@model PruebaBansi.Models.Examen
+
+<div class="row">
+    <div class="col-md-12 offset-sm-2">
+        <h2>Información del Examen</h2>
+        <div class="mb-3">
+            <label for="Nombre">Id Examen: </label>
+            <label style="font-weight: bold;">@Model.IdExamen</label>
+        </div>
+        <div class="mb-3">
+            <label for="Nombre">Nombre: </label>
+            <label style="font-weight: bold;">@Model.Nombre</label>
+        </div>
+        <div class="mb-3">
+            <label for="Descripcion">Descripción: </label>
+            <label style="font-weight: bold;">@Model.Descripcion</label>
+        </div>
+        <div class="mb-3">
+            <a asp-controller="Examen" asp-action="Lista" class="btn btn-warning">Regresar</a>
+        </div>
+    </div>
+</div>
+
+

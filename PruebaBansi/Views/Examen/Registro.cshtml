@@ -1,0 +1,23 @@
+@{
+}
+@model PruebaBansi.Models.Examen;
+
+<div class = "row">
+    <div class = "col-md-12 offset-sm-2">
+        <h2>Nuevo examen</h2>
+        <form asp-controller="Examen" asp-action="AgregarExamen" method="post">
+            <div class = "mb-3">
+                <label for="Nombre">Nombre</label>
+                <input class="form-control" asp-for="Nombre" type="text" />
+            </div>
+            <div class = "mb-3">
+                <label for="Descripcion">Descripcion</label>
+                <input class="form-control" asp-for="Descripcion" type="text" />
+            </div>
+            <div class = "mb-3">
+                <button class = "btn btn-primary" type = "submit">Registrar</button>
+                <a asp-asp-controller="Examen" asp-action="Lista" class = "btn btn-warning">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>

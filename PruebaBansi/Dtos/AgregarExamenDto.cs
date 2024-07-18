@@ -2,6 +2,6 @@
 
 public record class AgregarExamenDto
 (
-    string Nombre, 
+    string Nombre,
     string Descripcion
 );

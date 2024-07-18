@@ -44,7 +44,7 @@ public class ExamenController : Controller
             return NotFound();
         }
         return View(examen);
-        }
+    }
 
     [HttpGet]
     public async Task<IActionResult> Editar(int id)

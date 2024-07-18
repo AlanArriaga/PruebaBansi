@@ -2,6 +2,6 @@
 
 public record class ActualizarExamenDto
 (
-    string Nombre, 
+    string Nombre,
     string Descripcion
 );

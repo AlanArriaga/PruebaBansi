@@ -2,7 +2,7 @@
 
 public record class ExamenDto
 (
-    int IdExamen, 
-    string Nombre, 
-    string Descripcion 
+    int IdExamen,
+    string Nombre,
+    string Descripcion
 );
